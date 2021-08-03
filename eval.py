@@ -55,7 +55,7 @@ elif model_type == 'NEZHA-large':
     checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/model.ckpt-346400' % model_name
 else:
     checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/bert_model.ckpt' % model_name
-dict_path = '/root/kg/bert/%s/vocab.txt' % model_name
+dict_path = '/data/liubin/oppo_text_match_baseline/%s/vocab.txt' % model_name
 
 # 建立分词器
 if model_type in ['WoBERT', 'RoFormer']:
