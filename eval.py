@@ -62,7 +62,7 @@ if model_type == 'NEZHA':
 elif model_type == 'NEZHA-large':
     checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/model.ckpt-346400' % model_name
 else:
-    checkpoint_path = '/senteval_cn/liubin/oppo_text_match_baseline/%s/bert_model.ckpt' % model_name
+    checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/bert_model.ckpt' % model_name
 dict_path = '/data/liubin/oppo_text_match_baseline/%s/vocab.txt' % model_name
 
 # 建立分词器
