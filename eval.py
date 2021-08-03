@@ -48,7 +48,7 @@ model_name = {
     'SimBERT-small': 'chinese_simbert_L-6_H-384_A-12'
 }[model_type]
 
-config_path = '/root/kg/bert/%s/bert_config.json' % model_name
+config_path = '/data/liubin/oppo_text_match_baseline/%s/bert_config.json' % model_name
 if model_type == 'NEZHA':
     checkpoint_path = '/root/kg/bert/%s/model.ckpt-691689' % model_name
 elif model_type == 'NEZHA-large':
