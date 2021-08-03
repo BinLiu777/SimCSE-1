@@ -27,7 +27,7 @@ else:
     maxlen = 64
 
 # 加载数据集
-data_path = 'data/senteval_cn/senteval_cn/'
+data_path = 'data/senteval_cn/'
 
 datasets = {
     '%s-%s' % (task_name, f):
