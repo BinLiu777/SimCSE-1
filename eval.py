@@ -34,7 +34,10 @@ datasets = {
     load_data('%s%s/%s.%s.data' % (data_path, task_name, task_name, f))
     for f in ['train', 'valid', 'test']
 }
-print(datasets)
+for key, values in datasets.items():
+    print(len(values))
+    print(type(values))
+    print(values[0])
 stop
 
 # bert配置
