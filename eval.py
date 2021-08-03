@@ -50,11 +50,11 @@ model_name = {
 
 config_path = '/data/liubin/oppo_text_match_baseline/%s/bert_config.json' % model_name
 if model_type == 'NEZHA':
-    checkpoint_path = '/root/kg/bert/%s/model.ckpt-691689' % model_name
+    checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/model.ckpt-691689' % model_name
 elif model_type == 'NEZHA-large':
-    checkpoint_path = '/root/kg/bert/%s/model.ckpt-346400' % model_name
+    checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/model.ckpt-346400' % model_name
 else:
-    checkpoint_path = '/root/kg/bert/%s/bert_model.ckpt' % model_name
+    checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/bert_model.ckpt' % model_name
 dict_path = '/root/kg/bert/%s/vocab.txt' % model_name
 
 # 建立分词器
