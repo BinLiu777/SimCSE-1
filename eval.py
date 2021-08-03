@@ -1,5 +1,7 @@
 #! -*- coding: utf-8 -*-
 # SimCSE 中文测试
+import os
+os.environ['CUDA_VISIBLE_DEVICES'] = '0'
 
 from utils import *
 import sys
@@ -25,13 +27,15 @@ else:
     maxlen = 64
 
 # 加载数据集
-data_path = 'data/senteval_cn/'
+data_path = 'data/senteval_cn/senteval_cn/'
 
 datasets = {
     '%s-%s' % (task_name, f):
-    load_data('%s%s/%s.%s.data' % (data_path, task_name, task_name, f))
+    load_data('%s%s/%s.%s.senteval_cn' % (data_path, task_name, task_name, f))
     for f in ['train', 'valid', 'test']
 }
+print(datasets)
+stop
 
 # bert配置
 model_name = {
@@ -48,14 +52,14 @@ model_name = {
     'SimBERT-small': 'chinese_simbert_L-6_H-384_A-12'
 }[model_type]
 
-config_path = '/data/liubin/oppo_text_match_baseline/%s/bert_config.json' % model_name
+config_path = '/senteval_cn/liubin/oppo_text_match_baseline/%s/bert_config.json' % model_name
 if model_type == 'NEZHA':
-    checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/model.ckpt-691689' % model_name
+    checkpoint_path = '/senteval_cn/liubin/oppo_text_match_baseline/%s/model.ckpt-691689' % model_name
 elif model_type == 'NEZHA-large':
-    checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/model.ckpt-346400' % model_name
+    checkpoint_path = '/senteval_cn/liubin/oppo_text_match_baseline/%s/model.ckpt-346400' % model_name
 else:
-    checkpoint_path = '/data/liubin/oppo_text_match_baseline/%s/bert_model.ckpt' % model_name
-dict_path = '/data/liubin/oppo_text_match_baseline/%s/vocab.txt' % model_name
+    checkpoint_path = '/senteval_cn/liubin/oppo_text_match_baseline/%s/bert_model.ckpt' % model_name
+dict_path = '/senteval_cn/liubin/oppo_text_match_baseline/%s/vocab.txt' % model_name
 
 # 建立分词器
 if model_type in ['WoBERT', 'RoFormer']:
