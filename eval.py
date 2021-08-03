@@ -109,6 +109,13 @@ for name, data in datasets.items():
     all_labels.append(labels)
     train_token_ids.extend(a_token_ids)
     train_token_ids.extend(b_token_ids)
+for i in range(len(datasets)):
+    print(all_names[i])
+    print(all_weights[i])
+    print(len(all_token_ids[i][0]), len(all_token_ids[i][1]))
+    print(len(all_labels[i]))
+    print(len(train_token_ids))
+stop
 
 if task_name != 'PAWSX':
     np.random.shuffle(train_token_ids)
