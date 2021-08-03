@@ -35,6 +35,7 @@ datasets = {
     for f in ['train', 'valid', 'test']
 }
 for key, values in datasets.items():
+    print(key)
     print(len(values))
     print(type(values))
     print(values[0])
