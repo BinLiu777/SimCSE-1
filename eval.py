@@ -31,7 +31,7 @@ data_path = 'data/senteval_cn/'
 
 datasets = {
     '%s-%s' % (task_name, f):
-    load_data('%s%s/%s.%s.senteval_cn' % (data_path, task_name, task_name, f))
+    load_data('%s%s/%s.%s.data' % (data_path, task_name, task_name, f))
     for f in ['train', 'valid', 'test']
 }
 print(datasets)
